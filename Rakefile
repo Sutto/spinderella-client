@@ -6,12 +6,12 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "spinderella-client"
     gem.summary = %Q{A Simple, Synchronous TCPSocket client for Spinderella}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.description = %Q{A client library for spinderella (http://github.com/Sutto/spinderella)}
     gem.email = "sutto@sutto.net"
     gem.homepage = "http://github.com/Sutto/spinderella-client"
     gem.authors = ["Darcy Laycock"]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
-    gem.add_dependency "perennial", ">= 1.2.3"
+    gem.add_dependency "perennial", ">= 1.2.4"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
