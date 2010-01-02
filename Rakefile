@@ -11,7 +11,7 @@ begin
     gem.homepage = "http://github.com/Sutto/spinderella-client"
     gem.authors = ["Darcy Laycock"]
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+    gem.add_dependency "perennial", ">= 1.2.3"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError

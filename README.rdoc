@@ -1,6 +1,6 @@
 = spinderella-client
 
-Description goes here.
+A set of client libraries for spinderella.
 
 == Note on Patches/Pull Requests
  
