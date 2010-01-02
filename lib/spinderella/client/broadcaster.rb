@@ -1,4 +1,5 @@
 require 'perennial/protocols/pure_ruby/json_transport'
+require 'thread'
 
 module Spinderella
   module Client
@@ -13,6 +14,7 @@ module Spinderella
         @timeout       = (options[:timeout] || 15).to_f
         @read_timeout  = (options[:read_timeout] || 5).to_f
         @token         = options[:token]
+        @mutex         = Mutex.new
         authenticate(@token) if @token
       end
     
@@ -78,6 +80,14 @@ module Spinderella
           @auth_callback << blk
         end
         nil
+      end
+      
+      def write_message(name, data = {})
+        @mutex.synchronize { super }
+      end
+      
+      def read_message(timeout = nil)
+        @mutex.synchronize { super }
       end
       
     end
