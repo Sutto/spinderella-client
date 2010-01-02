@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
      "lib/spinderella/client.rb",
      "lib/spinderella/client/broadcaster.rb",
      "lib/spinderella/client/subscriber.rb",
+     "spinderella-client.gemspec",
      "test/helper.rb",
      "test/test_spinderella-client.rb"
   ]
